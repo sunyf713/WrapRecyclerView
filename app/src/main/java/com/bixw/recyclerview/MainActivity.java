@@ -68,16 +68,18 @@ public class MainActivity extends AppCompatActivity implements BaseMultiItemType
         adapter.setOnItemClickListener(this);
         mRecyclerView.setAdapter(adapter);
         View headerView= LayoutInflater.from(this).inflate(R.layout.header,null);
+        View headerView2= LayoutInflater.from(this).inflate(R.layout.header2,null);
         View footView= LayoutInflater.from(this).inflate(R.layout.foot,null);
         mRecyclerView.addHeaderView(headerView);
-        mRecyclerView.addFootView(footView);
+        mRecyclerView.addHeaderView(headerView2);
+        mRecyclerView.addFooterView(footView);
         adapter.append(mDatas);
     }
 
     protected void initData()
     {
         mDatas = new ArrayList<>();
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 60; i++)
         {
             mDatas.add("" + i);
         }

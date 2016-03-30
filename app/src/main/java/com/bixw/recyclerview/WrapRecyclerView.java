@@ -33,12 +33,14 @@ public class WrapRecyclerView extends RecyclerView {
      * @param view headView
      */
     public void addHeaderView(View view){
-        mHeaderViews.clear();
+        if(mHeaderViews.contains(view)){
+            mHeaderViews.remove(view);
+        }
         mHeaderViews.add(view);
         if(getAdapter()==null){
             throw new NullPointerException("setAdapter() it wasn't already called before");
         }
-        IHeaderFootView adapter= (IHeaderFootView) getAdapter();
+        IHeaderFooterView adapter= (IHeaderFooterView) getAdapter();
         adapter.addHeaderView(mHeaderViews);
     }
 
@@ -46,15 +48,16 @@ public class WrapRecyclerView extends RecyclerView {
      * this method must be called after setAdapter
      * @param view footView
      */
-    public void addFootView(View view){
-        mFootViews.clear();
+    public void addFooterView(View view){
+        if(mFootViews.contains(view)){
+            mFootViews.remove(view);
+        }
         mFootViews.add(view);
-
         if(getAdapter()==null){
             throw new NullPointerException("setAdapter() it wasn't already called before");
         }
-        IHeaderFootView adapter= (IHeaderFootView) getAdapter();
-        adapter.addFootView(mFootViews);
+        IHeaderFooterView adapter= (IHeaderFooterView) getAdapter();
+        adapter.addFooterView(mFootViews);
     }
 
 

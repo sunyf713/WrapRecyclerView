@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Created by bixinwei on 16/3/9.
  */
-public abstract class BaseMultiItemTypeRecyclerAdapter<ItemBean> extends RecyclerView.Adapter<BaseRecyclerViewHolder> implements IHeaderFootView{
+public abstract class BaseMultiItemTypeRecyclerAdapter<ItemBean> extends RecyclerView.Adapter<BaseRecyclerViewHolder> implements IHeaderFooterView {
 
     public ArrayList<ItemBean> mDatas = new ArrayList<>();
 
@@ -19,10 +19,13 @@ public abstract class BaseMultiItemTypeRecyclerAdapter<ItemBean> extends Recycle
 
     private ArrayList<View> mFootViews;
 
+    private ArrayList<Integer> mHeaderViewTypes = new ArrayList<>();
+    private ArrayList<Integer> mFooterViewTypes = new ArrayList<>();
+
     static final ArrayList<View> EMPTY_INFO_LIST = new ArrayList<>();
 
     static final int VIEW_TYPE_HEADER = Integer.MIN_VALUE;
-    static final int VIEW_TYPE_FOOT = Integer.MAX_VALUE;
+    static final int VIEW_TYPE_FOOTER = Integer.MAX_VALUE;
 
     IViewType viewTypes;
 
@@ -38,13 +41,12 @@ public abstract class BaseMultiItemTypeRecyclerAdapter<ItemBean> extends Recycle
 
 
     public void addHeaderView(ArrayList<View> views) {
-        mHeaderViews.clear();
-        mHeaderViews = views;
+        mHeaderViews=views;
+
     }
 
-    public void addFootView(ArrayList<View> views) {
-        mFootViews.clear();
-        mFootViews = views;
+    public void addFooterView(ArrayList<View> views) {
+       mFootViews=views;
     }
 
     public int getHeadersCount() {
@@ -124,10 +126,10 @@ public abstract class BaseMultiItemTypeRecyclerAdapter<ItemBean> extends Recycle
 
     @Override
     public BaseRecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        if (viewType == VIEW_TYPE_HEADER&&mHeaderViews.size()>0) {
-            return new BaseRecyclerViewHolder(mHeaderViews.get(0));
-        } else if (viewType == VIEW_TYPE_FOOT&&mFootViews.size()>0) {
-            return new BaseRecyclerViewHolder(mFootViews.get(0));
+        if (mHeaderViewTypes.contains(viewType)) {
+            return new BaseRecyclerViewHolder(mHeaderViews.get(viewType - VIEW_TYPE_HEADER));
+        } else if (mFooterViewTypes.contains(viewType)) {
+            return new BaseRecyclerViewHolder(mFootViews.get(viewType - VIEW_TYPE_FOOTER));
         } else {
             View itemView = LayoutInflater.from(parent.getContext()).inflate(viewTypes.getItemViewLayoutId(viewType), parent,
                     false);
@@ -161,17 +163,18 @@ public abstract class BaseMultiItemTypeRecyclerAdapter<ItemBean> extends Recycle
     @Override
     public int getItemViewType(int position) {
         int numHeaders = getHeadersCount();
-        if (position < numHeaders) {
-            return VIEW_TYPE_HEADER;
-        }
         int realPosition = position - numHeaders;
-        int adapterCount = mDatas.size();
-        if (realPosition < adapterCount) {
+        if (position < numHeaders) {
+            int mHeaderViewType = VIEW_TYPE_HEADER + position;
+            mHeaderViewTypes.add(mHeaderViewType);
+            return mHeaderViewType;
+        }else if(realPosition < mDatas.size()) {
             return viewTypes.getItemViewType(position,mDatas.get(realPosition));
+        }else{
+            int mFooterViewType = VIEW_TYPE_FOOTER + position - mDatas.size()-numHeaders;
+            mFooterViewTypes.add(mFooterViewType);
+            return mFooterViewType;
         }
-        return VIEW_TYPE_FOOT;
     }
-
-
 
 }

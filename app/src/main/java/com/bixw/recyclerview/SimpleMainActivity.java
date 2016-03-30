@@ -37,7 +37,7 @@ public class SimpleMainActivity extends AppCompatActivity implements BaseSimpleI
         View headerView= LayoutInflater.from(this).inflate(R.layout.header,null);
         View footView= LayoutInflater.from(this).inflate(R.layout.foot,null);
         mRecyclerView.addHeaderView(headerView);
-        mRecyclerView.addFootView(footView);
+        mRecyclerView.addFooterView(footView);
         adapter.append(mDatas);
     }
 

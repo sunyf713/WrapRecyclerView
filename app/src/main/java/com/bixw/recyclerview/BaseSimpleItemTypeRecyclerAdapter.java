@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Created by bixinwei on 16/3/9.
  */
-public abstract class BaseSimpleItemTypeRecyclerAdapter<ItemBean> extends RecyclerView.Adapter<BaseRecyclerViewHolder> implements IHeaderFootView {
+public abstract class BaseSimpleItemTypeRecyclerAdapter<ItemBean> extends RecyclerView.Adapter<BaseRecyclerViewHolder> implements IHeaderFooterView {
     public ArrayList<ItemBean> mDatas = new ArrayList<>();
 
     private ArrayList<View> mHeaderViews;
@@ -38,7 +38,7 @@ public abstract class BaseSimpleItemTypeRecyclerAdapter<ItemBean> extends Recycl
         mHeaderViews = views;
     }
 
-    public void addFootView(ArrayList<View> views) {
+    public void addFooterView(ArrayList<View> views) {
         mFootViews.clear();
         mFootViews = views;
     }
