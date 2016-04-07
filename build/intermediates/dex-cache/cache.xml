@@ -2,25 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/bixinwei/Downloads/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jar="/Users/bixinwei/Documents/AndroidStudioProjects/TestRecyclerView/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="/Users/bixinwei/Documents/AndroidStudioProjects/TestRecyclerView/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1-60b79722f0435c45a0da3eced246cc11a43e3493.jar" />
-    </item>
-    <item
-        jar="/Users/bixinwei/Documents/AndroidStudioProjects/TestRecyclerView/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
-        <dex dex="/Users/bixinwei/Documents/AndroidStudioProjects/TestRecyclerView/app/build/intermediates/pre-dexed/debug/classes-4e6a34193c3be83f6d93a417818aa77d0f14da90.jar" />
-    </item>
-    <item
-        jar="/Users/bixinwei/Documents/AndroidStudioProjects/TestRecyclerView/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="/Users/bixinwei/Documents/AndroidStudioProjects/TestRecyclerView/app/build/intermediates/pre-dexed/debug/classes-cd0c59ae96b1e452a610d3c3da83581ae2e33dfd.jar" />
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="/Users/bixinwei/Documents/AndroidStudioProjects/TestRecyclerView/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1-b3c3f0a27ed2b6aeaf729a18b53f8fab877d87ca.jar" />
     </item>
     <item
         jar="/Users/bixinwei/Documents/AndroidStudioProjects/TestRecyclerView/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.0/jars/classes.jar"
@@ -30,11 +16,32 @@
         <dex dex="/Users/bixinwei/Documents/AndroidStudioProjects/TestRecyclerView/app/build/intermediates/pre-dexed/debug/classes-fb373472afca0a16a3e857f87fb37fdc7796ed9b.jar" />
     </item>
     <item
-        jar="/Users/bixinwei/Documents/AndroidStudioProjects/TestRecyclerView/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jar="/Users/bixinwei/Documents/AndroidStudioProjects/TestRecyclerView/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="/Users/bixinwei/Documents/AndroidStudioProjects/TestRecyclerView/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1-b3c3f0a27ed2b6aeaf729a18b53f8fab877d87ca.jar" />
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/Users/bixinwei/Documents/AndroidStudioProjects/TestRecyclerView/app/build/intermediates/pre-dexed/debug/classes-4e6a34193c3be83f6d93a417818aa77d0f14da90.jar" />
+    </item>
+    <item
+        jar="/Users/bixinwei/Documents/AndroidStudioProjects/TestRecyclerView/app/build/intermediates/exploded-aar/in.srain.cube/ultra-ptr/1.0.11/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a0bdf70123d26dd83d8462d602b3a83a41934cf6">
+        <dex dex="/Users/bixinwei/Documents/AndroidStudioProjects/TestRecyclerView/app/build/intermediates/pre-dexed/debug/classes-1851ce1c6041b198a153986ba538d5b28062aeed.jar" />
+    </item>
+    <item
+        jar="/Users/bixinwei/Downloads/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/Users/bixinwei/Documents/AndroidStudioProjects/TestRecyclerView/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1-60b79722f0435c45a0da3eced246cc11a43e3493.jar" />
+    </item>
+    <item
+        jar="/Users/bixinwei/Documents/AndroidStudioProjects/TestRecyclerView/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/Users/bixinwei/Documents/AndroidStudioProjects/TestRecyclerView/app/build/intermediates/pre-dexed/debug/classes-cd0c59ae96b1e452a610d3c3da83581ae2e33dfd.jar" />
     </item>
 
 </items>
