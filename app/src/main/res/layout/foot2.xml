@@ -7,8 +7,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="#eee"
+        android:background="#ccff99"
         android:gravity="center"
-        android:text="i am foot"
+        android:text="i am foot2"
         />
 </LinearLayout>
